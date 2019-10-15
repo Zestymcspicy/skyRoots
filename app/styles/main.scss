@@ -49,6 +49,14 @@ body {
   padding-bottom: 1.5rem;
 }
 
+
+.top-spacer{
+  height: 70px;
+}
+.navbar {
+  background-color: #3a7731;
+}
+
 .navbar-toggler-icon > div{
   border: black solid 2px;
   background-color: black;
@@ -109,6 +117,9 @@ body {
   border-top: .05rem solid #e5e5e5;
 }
 
+#Purchase{
+  background-color: #c69453;
+}
 /* Customize container */
 @media (min-width: 48em) {
   .container {
