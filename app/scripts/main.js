@@ -31,6 +31,10 @@ links.forEach(link => {
   pages.forEach(page => {
     page.style.display='none'
   });
-  document.querySelector(`#${e.target.innerHTML}`).style.display= 'block';
+  let target = e.target.innerHTML;
+  if(target === 'Buy Now') {
+    target='Purchase';
+  }
+  document.querySelector(`#${target}`).style.display= 'block';
   })
 });
