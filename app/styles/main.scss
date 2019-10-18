@@ -119,11 +119,15 @@ body {
 
 #Purchase{
   background-color: #c69453;
-  display: none;
+  // display: none;
 }
 
 #Contact{
-  display: none;
+  // display: none;
+}
+
+.message-box{
+  background-color: #c69453;
 }
 /* Customize container */
 @media (min-width: 48em) {
