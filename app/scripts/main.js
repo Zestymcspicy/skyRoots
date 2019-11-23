@@ -25,16 +25,16 @@ links.forEach(link => link.addEventListener('click', ()=> {
 // https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
 // $(function () { $('[data-toggle="popover"]').popover(); });
 
-links.forEach(link => {
-  link.addEventListener('click', function(e) {
-  console.log(e);
-  pages.forEach(page => {
-    page.style.display='none'
-  });
-  let target = e.target.innerHTML;
-  if(target === 'Buy Now') {
-    target='Purchase';
-  }
-  document.querySelector(`#${target}`).style.display= 'block';
-  })
-});
+// links.forEach(link => {
+//   link.addEventListener('click', function(e) {
+//   console.log(e);
+//   pages.forEach(page => {
+//     page.style.display='none'
+//   });
+//   let target = e.target.innerHTML;
+//   if(target === 'Buy Now') {
+//     target='Purchase';
+//   }
+//   document.querySelector(`#${target}`).style.display= 'block';
+//   })
+// });
