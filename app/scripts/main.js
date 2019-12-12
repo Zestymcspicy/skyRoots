@@ -16,7 +16,20 @@ if(document.location.href.indexOf('smokescorner.html')!==-1){
   let feateuredText = document.getElementById('featuredText');
 }
 
-
+let emailForm = document.myemailform
+myemailform.addEventListener('submit', e => {
+  // e.preventDefault();
+  const bodyObj = {
+    name: e.target[0],
+    email: e.target[1],
+    message: e.target[2]
+  }
+  console.log(bodyObj);
+})
+const evtSource = new EventSource('https://script.google.com/macros/s/AKfycby5owE1CX0H2DCem8XN4R11vFUAMPdoQTMwnG10UA/exec')
+evtSource.addEventListener('onmessage', e=>console.log(e))
+// method="POST"
+// action="https://script.google.com/macros/s/AKfycby5owE1CX0H2DCem8XN4R11vFUAMPdoQTMwnG10UA/exec"
 // Uncomment to enable Bootstrap tooltips
 // https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
 // $(function () { $('[data-toggle="tooltip"]').tooltip(); });

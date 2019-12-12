@@ -17,9 +17,9 @@
   <!-- endbuild -->
   <!-- build:js scripts/modernizr.js -->
   <script src="scripts/modernizr.js"></script>
-  <meta http-equiv="Content-Security-Policy"
+  <!-- <meta http-equiv="Content-Security-Policy"
   content="style-src 'self' 'unsafe-inline';
-  script-src:'sha256-ThhI8UaSFEbbl6cISiZpnJ4Z44uNSq2tPKgyRTD3LyU='">
+  script-src:'sha256-ThhI8UaSFEbbl6cISiZpnJ4Z44uNSq2tPKgyRTD3LyU='"> -->
 
   <!-- endbuild -->
 </head>
@@ -60,10 +60,16 @@
 
 
 <div id="Contact" class="js-page">
+  <div class="top-spacer">
+    <h3 class="text-center pt-3">Coming Soon!</h3>
+  </div>
   <div class="container">
-    <div class="top-spacer"></div>
-    <h2>Send us a message</h2>
-    <form id="gform" method="POST" name="myemailform" action="https://script.google.com/macros/s/AKfycby5owE1CX0H2DCem8XN4R11vFUAMPdoQTMwnG10UA/exec">
+    <!-- <form id="gform" method="POST" name="myemailform" action="https://script.google.com/macros/s/AKfycby5owE1CX0H2DCem8XN4R11vFUAMPdoQTMwnG10UA/exec"> -->
+    <form id="gform" method="POST" name="myemailform" action="https://script.google.com/macros/s/AKfycbxgzhoI8EAbCt-vwpBh3j3-Li7WfTJWZWrUoBaighlyYA50eDdv/exec">
+    <h2 class="form-elements">Send us a message</h2>
+
+    <!-- <form method="POST" id="gform" action="https://formspree.io/@gmail.com"> -->
+     <div class="form-elements">
       <div class="form-group">
         <label for="userName">Enter Name:</label>
         <input type="text" name="name" id="userName" class="form-control col-4">
@@ -77,6 +83,12 @@
         <textarea name="message" cols="40" rows="6" id="userMessage" class="form-control col-8"></textarea>
       </div>
       <input type="submit" value="Send Message" class="btn btn-primary mb-2">
+    </div>
+      <div style="display:none" class="thankyou_message">
+ <!-- You can customize the thankyou message by editing the code below -->
+       <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+       <a href="index.html"><button class="btn btn-primary">Home</button></a>
+      </div>
     </form>
   </div>
 </div>
@@ -92,8 +104,7 @@
 <!-- build:js scripts/main.js -->
 
 <script src="scripts/main.js"></script>
-<script data-cfasync="false" type="text/javascript"
-src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script data-cfasync="false" type="text/javascript" src="scripts/formhandler.js"></script>
 <!-- endbuild -->
 </body>
 

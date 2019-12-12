@@ -1,3 +1,6 @@
+$srgreen: #3a7731;
+$srtan: #c69453;
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -44,7 +47,7 @@
 
 /* Space out content a bit */
 body {
-  background-color: #3a7731;
+  background-color: $srgreen;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -52,9 +55,22 @@ body {
 
 .top-spacer{
   height: 70px;
+  background-color: $srtan;
 }
 .navbar {
-  background-color: #3a7731;
+  background-color: $srgreen;
+
+}
+
+.green-line{
+  height: 40px;
+  background-color:$srgreen;
+}
+
+.banner-message{
+  position: sticky;
+  top: 55px;
+  z-index: 40;
 }
 
 .navbar-toggler-icon > div{
@@ -108,7 +124,7 @@ body {
 
 /* Make the masthead heading the same height as the navigation */
 .jumbotron{
-  background-color:#c69453;
+  background-color:$srtan;
 }
 
 /* Custom page footer */
@@ -119,7 +135,7 @@ body {
 }
 
 #Purchase{
-  background-color: #c69453;
+  background-color: $srtan;
   // display: none;
 }
 
@@ -128,11 +144,11 @@ body {
 }
 
 .message-box{
-  background-color: #c69453;
+  background-color: $srtan;
 }
 
 .corner-text{
-  background-color: #c69453;
+  background-color: $srtan;
 }
 /* Customize container */
 @media (min-width: 48em) {
