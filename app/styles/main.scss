@@ -56,10 +56,13 @@ body {
 .top-spacer{
   height: 70px;
   background-color: $srtan;
+  box-shadow: 0px 8px 8px #161101;
+  position: sticky;
+  top: 73px;
+  z-index: 40;
 }
 .navbar {
   background-color: $srgreen;
-
 }
 
 .green-line{
@@ -67,11 +70,6 @@ body {
   background-color:$srgreen;
 }
 
-.banner-message{
-  position: sticky;
-  top: 55px;
-  z-index: 40;
-}
 
 .navbar-toggler-icon > div{
   border: black solid 2px;
@@ -143,9 +141,7 @@ body {
   // display: none;
 }
 
-.message-box{
-  background-color: $srtan;
-}
+
 
 .corner-text{
   background-color: $srtan;
