@@ -11,9 +11,29 @@ links.forEach(link => link.addEventListener('click', ()=> {
   navbarNav.classList.remove('show')
 }))
 
+if(document.location.href.indexOf('index')!==-1){
+  setTimeout(() =>{
+    document.querySelector('.opener').style.display='none';
+  }, 7900 )
+}
+
 if(document.location.href.indexOf('smokescorner.html')!==-1){
-  let featuredTitle = document.getElementById('featuredTitle');
+  var db = firebase.firestore()
+
+  // let featuredTitle = document.getElementById('featuredTitle');
   let feateuredText = document.getElementById('featuredText');
+  db.collection('quillPosts').get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        let data = (doc.data());
+        data = data.entry;
+        // let entry = JSON.parse(data)
+        const entry = JSON.parse(data);
+        console.log(entry);
+        const quillText = new Quill(document.createElement('div'));
+        quillText.setContents(entry);
+        featuredText.insertAdjacentHTML('afterBegin',`${quillText.root.innerHTML}`);
+    });
+});
   console.log('welcome to smokescorner');
 }
 
