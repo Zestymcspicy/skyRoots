@@ -1,52 +1,70 @@
 $srgreen: #3a7731;
 $srtan: #c69453;
 
+@import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
+
+body{
+  font-family: 'Teko', sans-serif;
+  width:101%;
+}
 .opener{
   z-index: 1050;
   position: fixed;
   background-color: black;
-
   width: 100%;
-  height: 110%;
+  height: 105%;
   top: -30px;
   color: white;
-  text-align: justify;
-  animation: fadeaway 8s;
-  opacity: 0;
+  text-align: center;
+  // animation: fadeaway 8s;
+  // opacity: 0;
+}
+
+
+
+.opener-text{
+  // margin-top: 40%;
+  width:100%;
+  position: absolute;
+  display: block;
+  top: 50%;
+  // font-size: 40px;
 }
 
 .opener-image{
-  background-image:url("../images/gamePieces.png");
+  // max-width: 100%;
+  max-height: auto;
+  background-image:url("../images/FullSizeRender.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  // background-size: 50vw 50vh;
 }
 
 @keyframes fadeaway{
   0% {opacity: 1; }
   50% {opacity: 1; }
   75% {opacity: 1 ;}
-  100% {opacity: 0 ;}
+  100% {opacity: 0 ; display: none !important;}
 }
 
 @-o-keyframes fadeaway{
   0% {opacity: 1; }
   50% {opacity: 1; }
   75% {opacity: 1 ;}
-  100% {opacity: 0 ;}
+  100% {opacity: 0 ; display: none !important;}
 }
 
 @-moz-keyframes fadeaway{
   0% {opacity: 1; }
   50% {opacity: 1; }
   75% {opacity: 1 ;}
-  100% {opacity: 0 ;}
+  100% {opacity: 0 ; display: none !important;}
 }
 
 @-webkit-keyframes fadeaway{
   0% {opacity: 1; }
   50% {opacity: 1; }
   75% {opacity: 1 ;}
-  100% {opacity: 0 ;}
+  100% {opacity: 0 ; display: none !important;}
 }
 
 .coming-soon{

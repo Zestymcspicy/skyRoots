@@ -11,9 +11,10 @@ links.forEach(link => link.addEventListener('click', ()=> {
   navbarNav.classList.remove('show')
 }))
 
-if(document.location.href.indexOf('index')!==-1){
+if(document.location.href.indexOf('index.html')!==-1){
   setTimeout(() =>{
-    document.querySelector('.opener').style.display='none';
+    let opener = document.querySelector('.opener');
+    // opener.style.height='0px';
   }, 7900 )
 }
 
