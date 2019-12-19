@@ -12,14 +12,67 @@ links.forEach(link => link.addEventListener('click', ()=> {
 }))
 
 if(document.querySelector('.opener')){
+  var tiles = new Image();
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  tiles.src ='images/croppedTiles.PNG';
+  let cWidth, cHeight;
+  tiles.onload = () => {
+    cWidth = tiles.width;
+    cHeight = tiles.height;
+  }
+  setTimeout(()=> {
+    document.querySelector('.opener-text-title').style.display='none';
+    document.querySelector('#openerTextFirst').classList.remove('opener-text-hidden');
+    document.querySelector('#openerTextFirst').classList.add('opener-text-active');
+    document.querySelector('#FullSizeRender').classList.add('opener-text-hidden');
+  }, 3999)
+  setTimeout(() => {
+    document.querySelector('#openerTextSecond').classList.remove('opener-text-hidden');
+    document.querySelector('#openerTextSecond').classList.add('opener-text-active');
+  }, 4799)
+  setTimeout(() => {
+    runWaxing()
+    document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
+    document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
+    // document.querySelector('#canvas').classList.remove('opener-text-hidden');
+  },6399)
+  setTimeout(() => {
+    document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
+    document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
+  }, 8799)
   setTimeout(() =>{
     let opener = document.querySelector('.opener');
     opener.style.height='0px';
     opener.style.display='none';
-    document.querySelector('#FullSizeRender').style.display='none';
-    document.querySelector('.opener-text').style.display='none';
-  }, 7900 )
+  }, 15000 )
+  function runWaxing() {
+    let wh
+    if(window.innerHeight>window.innerWidth){
+      wh=(.9*window.innerWidth)
+    } else {
+      wh=(.9*window.innerHeight)
+    }
+    canvas.height=wh;
+    canvas.width=wh;
+    canvas.classList.remove('opener-text-hidden')
+
+    // tiles.addEventListener('load', function() {
+    ctx.drawImage(tiles, 0, 0, wh, wh)
+    ctx.fillRect(0, (.5*wh), wh, (.5*wh))
+    ctx.fillRect((.5*wh), 0, (.5*wh), (.5*wh))
+    ctx.beginPath();
+    ctx.moveTo(((1/6)*wh),0);
+    ctx.lineTo((.5*wh),(.5*wh));
+    ctx.lineTo((.5*wh), 0);
+    ctx.lineTo(((1/3)*wh),0);
+    ctx.fill();
+    // }, false);
+    // console.log(tiles);
+  }
 }
+
+
 
 if(document.location.href.indexOf('smokescorner.html')!==-1){
   var db = firebase.firestore()
