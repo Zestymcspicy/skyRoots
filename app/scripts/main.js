@@ -15,7 +15,7 @@ if(document.querySelector('.opener')){
   var tiles = new Image();
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
-  tiles.src ='images/croppedTiles.PNG';
+  tiles.src ='images/sticker.PNG';
   let cWidth, cHeight;
   tiles.onload = () => {
     cWidth = tiles.width;
@@ -43,8 +43,9 @@ if(document.querySelector('.opener')){
   }, 8799)
   setTimeout(() =>{
     let opener = document.querySelector('.opener');
-    opener.style.height='0px';
-    opener.style.display='none';
+    //uncomment to hide opener
+    // opener.style.height='0px';
+    // opener.style.display='none';
   }, 15000 )
   function runWaxing() {
     let wh

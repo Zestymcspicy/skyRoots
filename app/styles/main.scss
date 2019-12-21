@@ -28,8 +28,9 @@ h2{
   top: -30px;
   color: white;
   text-align: center;
-  animation: fadeaway 15s;
-  opacity: 0;
+  //uncomment below to hide opener
+  // opacity: 0;
+  // animation: fadeaway 15s;
 }
 
 .opener-text-hidden{
@@ -50,12 +51,12 @@ h2{
 }
 
 #openerTextFirst{
-  max-width: 50%;
+  max-width: 100%;
   top: 20%;
 }
 
 #openerTextSecond{
-  top:40%;
+  top:60%;
 }
 
 #FullSizeRender{
@@ -126,12 +127,20 @@ h2{
   100% {opacity: 0 ; display: none;}
 }
 
+.greenBg{
+  background-color: $srgreen;
+}
 
 .coming-soon{
+  z-index: 1020;
+  // bottom: 300px;
+  // position: sticky;
+  top: 70px;
+  background-color: transparent;
   transform:skewX(-14deg);
-  // transform: skewY(-2deg);
+  transform: skewY(-5deg);
   text-shadow: 2px 2px black;
-  font-size: 4vh;
+  // font-size: 4vh;
   padding-bottom: 2vh;
 }
 
@@ -181,7 +190,7 @@ h2{
 
 /* Space out content a bit */
 body {
-  background-color: $srgreen;
+  background-color: $srtan;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -195,8 +204,10 @@ body {
   top: 73px;
   z-index: 40;
 }
+
 .navbar {
   background-color: $srgreen;
+  box-shadow: 0px 8px 8px #161101;
 }
 
 .green-line{
@@ -257,6 +268,7 @@ body {
 /* Make the masthead heading the same height as the navigation */
 .jumbotron{
   background-color:$srtan;
+  padding-top: 0 !important;
 }
 
 /* Custom page footer */
@@ -324,6 +336,10 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+
+  #openerTextFirst {
+    max-width: 50%;
   }
 
   #canvas{
