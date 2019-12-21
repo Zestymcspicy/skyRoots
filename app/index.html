@@ -35,7 +35,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <!-- <div class="container"> -->
-  <div class="header">
+  <div  id="Home" class="header">
     <nav class="navbar pb-1 fixed-top navbar-expand-lg">
       <h2 class="ml-4">SkyRoots</h2>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
   <!-- <div class="top-spacer"> -->
     <h1 class="display-2 text-center pt-5 coming-soon">Coming Soon!</h1>
   <!-- </div> -->
-  <div id="Home">
+  <div>
     <!-- <div class="top-spacer"></div> -->
     <div class="jumbotron container-fluid">
       <div class="row">
@@ -87,19 +87,19 @@
           <h3 class="">The Board Game</h3>
           <a href="contact.html"><button class="btn btn-success">Contact Us</button></a>
         </div>
-        <div class="col-lg mt-5 pl-md-0 mr-md-5">
-          <video class="img-fluid" controls autoplay loop autobuffer muted playsinline>
+        <div class="col-lg mt-5 pl-md-0 mr-md-5 d-flex justify-content-center">
+          <video id="gamePlay" class="img-fluid img" controls autoplay loop autobuffer muted playsinline>
             <source src="images/gamePlay.webm" type="video/webm"></source>
             <source src="images/gamePlay.mp4" type="video/mp4"></source>
           </video>
         </div>
       </div>
     </div>
-    <div class="greenBg">
+    <div>
     <h2 class="pt-3 text-center">The Wheel</h2>
     <div class="row marketing">
-      <div class="col-11 ml-5 mr-2">
-        <p class="px-4">There are many nations and various colors (and even direction) are used
+      <div class="col-11 px-0 ml-md-5 mr-md-2">
+        <p class="px-md-4">There are many nations and various colors (and even direction) are used
         to signify the Thunders or Winds or Guiding Spirits, but agreement
         exists that they have power, influence, significance.  For Potawatomi,
         things always begin in the East, designated by the color White, and
@@ -127,14 +127,14 @@
     <div class="row marketing">
       <div class="container-sm mx-4">
         <div class="row">
-          <div class="col-8 mx-auto">
-            <img class="img-fluid" src="images/tiles.png" alt="The game board at the beginning of play" />
+          <div class="col-md-8 mx-auto">
+            <img class="img-fluid" src="images/tiles.png" alt="The various glyphs" />
           </div>
         </div>
       </div>
     </div>
     <div class="row marketing">
-      <div class="col-lg-6 ml-5 mr-2">
+      <div class="col-lg-6 ml-md-5 px-0 mr-md-2">
         <h4 class="ml-4">Welcome to the Four Thunders board game!</h4>
         <p class="px-4">Four Thunder's board is made up of modular tiles that form together into
           "the Land" as the game is being played, then in the second half of
@@ -147,7 +147,9 @@
           in the Culture section elsewhere on this site in the near future.
         </p>
       </div>
-      <img class="col-lg-5" src="images/gamePieces.png" alt="The game board at the beginning of play" />
+      <div class="col-lg-5 d-flex justify-content-center">
+      <img class="img-fluid img" src="images/gamePieces.png" alt="The game board at the beginning of play" />
+    </div>
     </div>
     <div class="row marketing">
     </div>

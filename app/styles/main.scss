@@ -16,7 +16,9 @@ h2{
   font-size: 36px;
 }
 
-
+#gamePlay{
+  max-width:400px;
+}
 
 .opener{
   display: none;
@@ -199,7 +201,7 @@ body {
 .top-spacer{
   height: 70px;
   background-color: $srtan;
-  box-shadow: 0px 8px 8px #161101;
+  // box-shadow: 0px 8px 8px #161101;
   position: sticky;
   top: 73px;
   z-index: 40;
@@ -287,7 +289,10 @@ body {
   // display: none;
 }
 
-
+.my-center{
+  margin-left: auto;
+  margin-right:auto;
+}
 
 .corner-text{
   background-color: $srtan;
@@ -305,7 +310,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: left;
-  border-bottom: .05rem solid #e5e5e5;
+  // border-bottom: .05rem solid #e5e5e5;
 }
 .jumbotron .btn {
   padding: .75rem 1.5rem;
