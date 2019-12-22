@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>SkyRoots</title>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
   <!-- Place favicon.ico in the root directory -->
   <!-- build:css styles/vendor.css -->
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
@@ -21,16 +21,20 @@
 
 </head>
 
-<!-- <body>
-  <div class="opener d-flex justify-content-around">
+<body>
+  <div class="opener">
+    <div class="opener-top-bar"></div>
     <div class="container">
-      <img id="FullSizeRender" class="img-fluid" src="images/FullSizeRender.jpg"></img>
-      <canvas id="canvas" class="opener-text-hidden"></canvas>
-        <span id="openerTextFirst" class="opener-text-hidden display-2">The world's only board game</span>
-        <span id="openerTextSecond" class="opener-text-hidden display-4">with a waxing</span>
-        <span class="display-1 opener-text-title">Four Thunders</span>
+      <div class="row">
+        <div class="col-12">
+          <span class="text-left ml-1 display-2 opener-text-title">Four Thunders</span>
+        </div>
+      </div>
+      <div class="row">
+        <p class="text-left ml-2" id="openerParagraph"></p>
+      </div>
     </div>
-  </div> -->
+  </div>
   <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -71,35 +75,40 @@
     <div class="jumbotron container-fluid">
       <div class="row">
         <!-- <div class="col-1"></div> -->
-        <div class="col">
-          <!-- <img src="images/fourWinds.png"/> -->
-          <div class="mt-3"id="fourWinds">
+        <div class="col-lg-4 col pl-4">
+          <!-- <div class="col-lg-3"></div> -->
+          <img id="medicineWheel" class="img-fluid img" src="images/medicineWheel.svg"/>
+          <!-- <img class="img-fluid img" src="images/medicineWheel.png"/> -->
+          <!-- <div class="mt-3"id="fourWinds">
             <div id="yellow" class="quarter"></div>
             <div id="black" class="quarter"></div>
             <div id="red" class="quarter"></div>
             <div id="white" class="quarter"></div>
-          </div>
+          </div> -->
         </div>
         <!-- <div class="col-md-2"></div> -->
-        <div class="col">
+        <div class="col-lg-3 col">
           <h1 class="display-4">Four Thunders</h1>
           <h2 class="lead">Nyew Jigwe'k</h2>
           <h3 class="">The Board Game</h3>
           <a href="contact.html"><button class="btn btn-success">Contact Us</button></a>
         </div>
-        <div class="col-lg mt-5 pl-md-0 mr-md-5 d-flex justify-content-center">
-          <video id="gamePlay" class="img-fluid img" controls autoplay loop autobuffer muted playsinline>
-            <source src="images/gamePlay.webm" type="video/webm"></source>
-            <source src="images/gamePlay.mp4" type="video/mp4"></source>
+        <div class="col-lg-4 mt-5 mt-lg-0 pl-lg-0 mr-lg-5 d-flex justify-content-center">
+          <!-- <embed id="gamePlay" type="video/webm" height="320px" width="425px" src="images/gamePlay.mp4"/> -->
+          <video id="gamePlay" class="img-fluid img" playsinline controls>
+            <source src="images/gamePlay.ogv"></source>
+            <source type="video/webm" src="images/gamePlay.webm"></source>
+            <source type="video/mp4" src="images/gamePlay.mp4"></source>
           </video>
         </div>
+        <!-- <div class="col-1"></div> -->
       </div>
     </div>
     <div>
     <h2 class="pt-3 text-center">The Wheel</h2>
     <div class="row marketing">
       <div class="col-11 px-0 ml-md-5 mr-md-2">
-        <p class="px-md-4">There are many nations and various colors (and even direction) are used
+        <p class="px-md-4 pl-4">There are many nations and various colors (and even direction) are used
         to signify the Thunders or Winds or Guiding Spirits, but agreement
         exists that they have power, influence, significance.  For Potawatomi,
         things always begin in the East, designated by the color White, and

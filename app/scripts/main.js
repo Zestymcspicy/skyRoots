@@ -2,51 +2,71 @@ const links = document.querySelectorAll('.js-link');
 const pages = document.querySelectorAll('.js-page');
 const navbarNav = document.getElementById('navbarNav');
 
+
+if(document.location.href.indexOf('fadein')===-1){
 document.querySelector( '.navbar-toggler-icon' ).addEventListener( 'click', function() {
   // console.log('hello')
   this.classList.toggle( 'active' );
 });
+}
 
 links.forEach(link => link.addEventListener('click', ()=> {
   navbarNav.classList.remove('show')
 }))
 
 if(document.querySelector('.opener')){
-  var tiles = new Image();
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
-  tiles.src ='images/sticker.PNG';
-  let cWidth, cHeight;
-  tiles.onload = () => {
-    cWidth = tiles.width;
-    cHeight = tiles.height;
-  }
-  setTimeout(()=> {
-    document.querySelector('.opener-text-title').style.display='none';
-    document.querySelector('#openerTextFirst').classList.remove('opener-text-hidden');
-    document.querySelector('#openerTextFirst').classList.add('opener-text-active');
-    document.querySelector('#FullSizeRender').classList.add('opener-text-hidden');
-  }, 3999)
+  let textArray=['A board game about Balance', 'From a Native American point of view',
+  'Coming soon, under development now', '... And you can be a part!']
+  let i;
+  let elAttach = document.getElementById('openerParagraph');
   setTimeout(() => {
-    document.querySelector('#openerTextSecond').classList.remove('opener-text-hidden');
-    document.querySelector('#openerTextSecond').classList.add('opener-text-active');
-  }, 4799)
-  setTimeout(() => {
-    runWaxing()
-    document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
-    document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
-    // document.querySelector('#canvas').classList.remove('opener-text-hidden');
-  },6399)
-  setTimeout(() => {
-    document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
-    document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
-  }, 8799)
+  for(i=0; i<textArray.length; i++){
+    const text = `<span class="short-fade">${textArray[i]}</span><br>`
+    setTimeout(()=> {
+      elAttach.insertAdjacentHTML('beforeend', text)
+    }, (i*1700))
+    }
+  }, 600)
+
   setTimeout(() =>{
     let opener = document.querySelector('.opener');
-    //uncomment to hide opener
-    // opener.style.height='0px';
-    // opener.style.display='none';
-  }, 15000 )
+    // uncomment to hide opener
+    opener.style.height='0px';
+    opener.style.display='none';
+    document.getElementById('gamePlay').src='images/gamePlay.mp4';
+  }, 9990)
+  // var tiles = new Image();
+  // var canvas = document.getElementById('canvas');
+  // var ctx = canvas.getContext('2d');
+  // tiles.src ='images/FullSizeRender.jpg';
+  // let cWidth, cHeight;
+  // tiles.onload = () => {
+  //   cWidth = tiles.width;
+  //   cHeight = tiles.height;
+  // }
+  // setTimeout(()=> {
+    // document.querySelector('.opener-text-title').style.display='none';
+    // document.querySelector('#openerTextFirst').classList.remove('opener-text-hidden');
+    // document.querySelector('#openerTextFirst').classList.add('short-fade');
+    // document.querySelector('#openerTextFirst').classList.add('opener-text-active');
+    // document.querySelector('#FullSizeRender').classList.add('opener-text-hidden');
+  // }, 3999)
+  // setTimeout(() => {
+    // document.querySelector('#openerTextSecond').classList.remove('opener-text-hidden');
+    // document.querySelector('#openerTextSecond').classList.add('short-fade');
+    // document.querySelector('#openerTextSecond').classList.add('opener-text-active');
+  // }, 4799)
+  // setTimeout(() => {
+    // runWaxing()
+    // document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
+    // document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
+    // document.querySelector('#canvas').classList.remove('opener-text-hidden');
+  // },6399)
+  // setTimeout(() => {
+    // document.querySelector('#openerTextSecond').classList.add('opener-text-hidden');
+    // document.querySelector('#openerTextFirst').classList.add('opener-text-hidden');
+  // }, 8799)
+
   function runWaxing() {
     let wh
     if(window.innerHeight>window.innerWidth){
@@ -73,7 +93,24 @@ if(document.querySelector('.opener')){
   }
 }
 
+if(document.getElementById('contactFormSend')){
+  let formSend = document.getElementById('contactFormSend')
+  formSend.addEventListener('click', () => {
+    let goHome = document.getElementById('goHome');
+    setTimeout(() => goHome.disabled=false, 500)
+  })
+}
 
+if(document.getElementById('gamePlay')){
+  let video = document.getElementById('gamePlay');
+  video.addEventListener('canplay', () => {
+    video.autoplay='autoplay'
+    console.log('loaded')
+    video.addEventListener('click', function(){
+      video.play();
+    })
+  })
+}
 
 if(document.location.href.indexOf('smokescorner.html')!==-1){
   var db = firebase.firestore()

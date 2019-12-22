@@ -29,10 +29,10 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <!-- <div class="container"> -->
-  <div class="header">
-    <nav class="navbar fixed-top navbar-expand-lg">
-      <h2 class="ml-4 mt-1">SkyRoots</h2>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <div  id="Home" class="header">
+    <nav class="navbar pb-1 fixed-top navbar-expand-lg">
+      <h2 class="ml-4">SkyRoots</h2>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <div></div>
           <div></div>
@@ -82,12 +82,12 @@
         <label for="userMessage">Enter Message:</label>
         <textarea name="message" cols="40" rows="6" id="userMessage" class="form-control col-8"></textarea>
       </div>
-      <input type="submit" value="Send Message" class="btn btn-primary mb-2">
+      <input id="contactFormSend" type="submit" value="Send Message" class="btn btn-primary mb-2">
     </div>
       <div style="display:none" class="thankyou_message">
  <!-- You can customize the thankyou message by editing the code below -->
        <h2>Thanks for contacting us! We will get back to you soon!</h2>
-       <a href="index.html"><button class="btn btn-primary">Home</button></a>
+       <a href="index.html"id="goHome" class="btn btn-primary">Home</a>
       </div>
     </form>
   </div>

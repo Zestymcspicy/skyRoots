@@ -17,22 +17,29 @@ h2{
 }
 
 #gamePlay{
-  max-width:400px;
+  max-width:500px;
+  min-width:300px;
+}
+
+.opener-top-bar{
+  display: block;
+  width: 100%;
+  height: 30%;
 }
 
 .opener{
-  display: none;
+  // display: none;
   z-index: 1050;
   position: fixed;
-  background-color: black;
+  background: linear-gradient(-30deg, #c1492d, yellow);
   width: 100%;
   height: 105%;
   top: -30px;
-  color: white;
+  color: black;
   text-align: center;
-  //uncomment below to hide opener
+  // uncomment below to hide opener
   // opacity: 0;
-  // animation: fadeaway 15s;
+  animation: fadeaway 10s;
 }
 
 .opener-text-hidden{
@@ -40,33 +47,33 @@ h2{
 }
 
 .opener-text-active{
-  position: absolute;
+  // position: absolute;
   display: block;
 }
 
 .opener-text-title{
   width:100%;
-  position: absolute;
+  // position: absolute;
   display: block;
-  top: 50%;
-  animation: fadeawayshort 4s;
+  // top: 50%;
+  animation: fadeinshort 4s;
 }
 
 #openerTextFirst{
-  max-width: 100%;
-  top: 20%;
+  // max-width: 100%;
+  // bottom: 20%;
 }
 
 #openerTextSecond{
-  top:60%;
+  // bottom: 20%;
 }
 
 #FullSizeRender{
-  animation: fadeawayshort 4s;
+  animation: fadeinshort 4s;
 }
 
 .short-fade{
-  animation: fadeawayshort 4s;
+  animation: fadeinshort 4s;
 }
 
 .opener-image{
@@ -101,32 +108,32 @@ h2{
   100% {opacity: 0 ; display: none;}
 }
 
-@keyframes fadeawayshort{
-  0% {opacity: 1; display:block}
-  50% {opacity: 1; }
-  // 75% {opacity: 1 ;}
-  100% {opacity: 0 ; display: none;}
-}
-
-@-o-keyframes fadeawayshort{
-  0% {opacity: 1; }
-  50% {opacity: 1; }
-  // 75% {opacity: 1 ;}
-  100% {opacity: 0 ; display: none;}
-}
-
-@-moz-keyframes fadeawayshort{
-  0% {opacity: 1; }
+@keyframes fadeinshort{
+  0% {opacity: 0; }
   // 50% {opacity: 1; }
   // 75% {opacity: 1 ;}
-  100% {opacity: 0 ; display: none;}
+  100% {opacity: 1 ; }
 }
 
-@-webkit-keyframes fadeawayshort{
-  0% {opacity: 1; }
-  50% {opacity: 1; }
+@-o-keyframes fadeinshort{
+  0% {opacity: 0; }
+  // 50% {opacity: 1; }
   // 75% {opacity: 1 ;}
-  100% {opacity: 0 ; display: none;}
+  100% {opacity: 1 ; }
+}
+
+@-moz-keyframes fadeinshort{
+  0% {opacity: 0; }
+  // 50% {opacity: 1; }
+  // 75% {opacity: 1 ;}
+  100% {opacity: 1 ; }
+}
+
+@-webkit-keyframes fadeinshort{
+  0% {opacity: 0; }
+  // 50% {opacity: 1; }
+  // 75% {opacity: 1 ;}
+  100% {opacity: 1 ; }
 }
 
 .greenBg{
@@ -144,6 +151,10 @@ h2{
   text-shadow: 2px 2px black;
   // font-size: 4vh;
   padding-bottom: 2vh;
+}
+
+#medicineWheel{
+  min-width: 300px;
 }
 
 .browserupgrade {
@@ -197,6 +208,9 @@ body {
   padding-bottom: 1.5rem;
 }
 
+label {
+  font-size: 20px;
+}
 
 .top-spacer{
   height: 70px;
@@ -204,7 +218,7 @@ body {
   // box-shadow: 0px 8px 8px #161101;
   position: sticky;
   top: 73px;
-  z-index: 40;
+  z-index: -1;
 }
 
 .navbar {
@@ -307,6 +321,7 @@ body {
   margin: 2rem 0;
 }
 
+
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: left;
@@ -334,6 +349,10 @@ body {
     padding-right: 0;
     padding-left: 0;
   }
+
+  #medicineWheel{
+    // max-width: 300px;
+  }
   /* Space out the masthead */
   .header {
     margin-bottom: 2rem;
@@ -345,6 +364,10 @@ body {
 
   #openerTextFirst {
     max-width: 50%;
+  }
+
+  .opener-top-bar{
+    height:50%;
   }
 
   #canvas{
