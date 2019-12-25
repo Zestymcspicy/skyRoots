@@ -4,37 +4,42 @@ const navbarNav = document.getElementById('navbarNav');
 
 
 if(document.location.href.indexOf('fadein')===-1){
-document.querySelector( '.navbar-toggler-icon' ).addEventListener( 'click', function() {
-  // console.log('hello')
-  this.classList.toggle( 'active' );
-});
+  document.querySelector( '.navbar-toggler-icon' ).addEventListener( 'click', function() {
+    // console.log('hello')
+    this.classList.toggle( 'active' );
+  });
 }
 
-links.forEach(link => link.addEventListener('click', ()=> {
-  navbarNav.classList.remove('show')
-}))
+  links.forEach(link => link.addEventListener('click', ()=> {
+    navbarNav.classList.remove('show')
+  }))
 
 if(document.querySelector('.opener')){
-  let textArray=['A board game about Balance', 'From a Native American point of view',
-  'Coming soon, under development now', '... And you can be a part!']
-  let i;
-  let elAttach = document.getElementById('openerParagraph');
-  setTimeout(() => {
-  for(i=0; i<textArray.length; i++){
-    const text = `<span class="short-fade">${textArray[i]}</span><br>`
-    setTimeout(()=> {
-      elAttach.insertAdjacentHTML('beforeend', text)
-    }, (i*1700))
-    }
-  }, 600)
+    let textArray=['A board game about Balance', 'From a Native American point of view',
+    'Coming soon, under development now', '... And you can be a part!']
+    let i;
+    let elAttach = document.getElementById('openerParagraph');
+    setTimeout(() => {
+    for(i=0; i<textArray.length; i++){
+      const text = `<span class="short-fade">${textArray[i]}</span><br>`
+      setTimeout(()=> {
+        elAttach.insertAdjacentHTML('beforeend', text)
+      }, (i*1700))
+      }
+    }, 600)
 
-  setTimeout(() =>{
-    let opener = document.querySelector('.opener');
-    // uncomment to hide opener
-    opener.style.height='0px';
-    opener.style.display='none';
-    document.getElementById('gamePlay').src='images/gamePlay.mp4';
-  }, 9990)
+    setTimeout(() => {
+      document.querySelector('#opener-logo').classList.remove('opener-text-hidden');
+      document.querySelector('#opener-logo').classList.add('short-fade');
+    }, 6200)
+
+    setTimeout(() =>{
+      let opener = document.querySelector('.opener');
+      // uncomment to hide opener
+      opener.style.display='none';
+      document.body.style='overflow-y:scroll';
+      // opener.style.height='0px';
+    }, 9980)
   // var tiles = new Image();
   // var canvas = document.getElementById('canvas');
   // var ctx = canvas.getContext('2d');

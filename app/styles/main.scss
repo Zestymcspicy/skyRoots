@@ -3,9 +3,16 @@ $srtan: #c69453;
 
 @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
 
+label {
+  font-size: 20px;
+}
 body{
   font-family: 'Teko', sans-serif;
   width:100%;
+  overflow-y: hidden;
+  background-color: $srtan;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 a, span, p{
@@ -16,9 +23,19 @@ h2{
   font-size: 36px;
 }
 
+
+.footer-icon{
+  width: 36px;
+  height:auto;
+}
+
 #gamePlay{
   max-width:500px;
   min-width:300px;
+}
+
+#gamePieces{
+  max-height:270px;
 }
 
 .opener-top-bar{
@@ -38,7 +55,7 @@ h2{
   color: black;
   text-align: center;
   // uncomment below to hide opener
-  // opacity: 0;
+  opacity: 0;
   animation: fadeaway 10s;
 }
 
@@ -47,29 +64,18 @@ h2{
 }
 
 .opener-text-active{
-  // position: absolute;
   display: block;
 }
 
 .opener-text-title{
   width:100%;
-  // position: absolute;
   display: block;
-  // top: 50%;
   animation: fadeinshort 4s;
 }
 
-#openerTextFirst{
-  // max-width: 100%;
-  // bottom: 20%;
-}
-
-#openerTextSecond{
-  // bottom: 20%;
-}
-
-#FullSizeRender{
-  animation: fadeinshort 4s;
+#opener-logo{
+  margin: 12vh 0 0 0;
+  max-width:60%;
 }
 
 .short-fade{
@@ -154,7 +160,7 @@ h2{
 }
 
 #medicineWheel{
-  min-width: 300px;
+  min-width: 200px;
 }
 
 .browserupgrade {
@@ -202,15 +208,6 @@ h2{
 }
 
 /* Space out content a bit */
-body {
-  background-color: $srtan;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-label {
-  font-size: 20px;
-}
 
 .top-spacer{
   height: 70px;
@@ -351,7 +348,7 @@ label {
   }
 
   #medicineWheel{
-    // max-width: 300px;
+    max-width: 300px;
   }
   /* Space out the masthead */
   .header {
@@ -362,17 +359,19 @@ label {
     border-bottom: 0;
   }
 
-  #openerTextFirst {
-    max-width: 50%;
-  }
+
 
   .opener-top-bar{
     height:50%;
+    padding: 0 0 3vh 0;
   }
 
-  #canvas{
-    margin-top: 10%
-    // width: 90%;
-    // height: 300px;
+
+}
+
+@media screen and (min-width: 30em) {
+  #opener-logo{
+    margin-top: 0vh !important;
+    max-width: 45%;
   }
 }
