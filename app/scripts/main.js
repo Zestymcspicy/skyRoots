@@ -35,6 +35,7 @@ if(document.querySelector('.opener')){
 
     setTimeout(() =>{
       let opener = document.querySelector('.opener');
+      document.querySelector('#gamePlay').setAttribute('autoplay,""')
       // uncomment to hide opener
       opener.style.display='none';
       document.body.style='overflow-y:scroll';

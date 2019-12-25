@@ -30,6 +30,7 @@ h2{
 }
 
 #gamePlay{
+  max-height: 300px;
   max-width:500px;
   min-width:300px;
 }
@@ -160,7 +161,8 @@ h2{
 }
 
 #medicineWheel{
-  min-width: 200px;
+  min-width: 170px;
+  max-width:240px;
 }
 
 .browserupgrade {
@@ -318,7 +320,6 @@ h2{
   margin: 2rem 0;
 }
 
-
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: left;
@@ -345,6 +346,10 @@ h2{
   .footer {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  #gamePlay{
+    max-height: 375px;
   }
 
   #medicineWheel{
