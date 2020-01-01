@@ -7,10 +7,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>SkyRoots</title>
-  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> -->
   <!-- Place favicon.ico in the root directory -->
   <!-- build:css styles/vendor.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/5aa23c5e4f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
   <!-- endbuild -->
   <!-- build:css styles/main.css -->
@@ -33,6 +39,9 @@
       </div>
       <div class="row">
         <p class="text-left ml-1" id="openerParagraph"></p>
+        <div class="col float-right">
+          <button type="button" id="skipButton" class="btn btn-lg btn-outline-light float-right">SKIP >></button>
+        </div>
       </div>
     </div>
   </div>
@@ -68,18 +77,14 @@
       </div>
     </nav>
   </div>
-  <!-- <div class="top-spacer"> -->
+
     <h1 class="display-2 text-center pt-5 coming-soon">Coming Soon!</h1>
-  <!-- </div> -->
+
   <div>
-    <!-- <div class="top-spacer"></div> -->
     <div class="jumbotron container-fluid pb-0">
       <div class="row">
-        <!-- <div class="col-1"></div> -->
         <div class="col-lg-4 col pl-4">
-          <!-- <div class="col-lg-3"></div> -->
-          <img id="medicineWheel" class="img-fluid img" src="images/medicineWheel.svg"/>
-          <!-- <img class="img-fluid img" src="images/medicineWheel.png"/> -->
+              <img id="medicineWheel" class="img" src="images/medicineWheel.svg"/>
           <!-- <div class="mt-3"id="fourWinds">
             <div id="yellow" class="quarter"></div>
             <div id="black" class="quarter"></div>
@@ -87,7 +92,6 @@
             <div id="white" class="quarter"></div>
           </div> -->
         </div>
-        <!-- <div class="col-md-2"></div> -->
         <div class="col-lg-3 col">
           <h1 class="display-4">Four Thunders</h1>
           <h2 class="lead">Nyew Jigwe'k</h2>
@@ -95,13 +99,9 @@
           <a href="contact.html"><button class="btn btn-success">Contact Us</button></a>
         </div>
         <div class="col-lg-4 mt-5 mt-lg-0 pl-lg-0 mr-lg-5 d-flex justify-content-center">
-
-          <!-- <embed id="gamePlay" src="https://youtu.be/vZ6OqXi2Kp4"></embed> -->
-          <!-- <embed id="gamePlay" type="video/webm" height="375px" width="425px" src="images/gamePlay.mp4"/> -->
-          <video id="gamePlay" class="" preload="metadata" muted playsinline controls>
-            <!-- <source src="images/converted.webm" type="video/webm"></source> -->
-            <source src="images/converted.mp4" type="video/mp4"></source>
-            <!-- <source src="images/converted.ogv" type="video/ogv"></source> -->
+          <!-- <img class="img-fluid" src="images/temp.gif"/> -->
+          <video id="gamePlay" class="" preload="metadata" muted autoplay playsinline loop controls>
+            <source src="images/temp.mp4" type="video/mp4"></source>
           </video>
         </div>
         <!-- <div class="col-1"></div> -->
@@ -110,8 +110,8 @@
     <div>
     <h2 class="pt-3 text-center">The Wheel</h2>
     <div class="row marketing">
-      <div class="col-11 px-0 ml-md-5 mr-md-2">
-        <p class="px-md-4 pl-4">There are many nations and various colors (and even direction) are used
+      <div class="col-md-11 px-0 ml-md-5 mr-md-2">
+        <p class="px-md-4 pl-md-4">There are many nations and various colors (and even direction) are used
         to signify the Thunders or Winds or Guiding Spirits, but agreement
         exists that they have power, influence, significance.  For Potawatomi,
         things always begin in the East, designated by the color White, and
@@ -148,7 +148,7 @@
     <div class="row marketing">
       <div class="col-lg-6 ml-md-5 px-0 mr-md-2">
         <h4 class="ml-4">Welcome to the Four Thunders board game!</h4>
-        <p class="px-4">Four Thunder's board is made up of modular tiles that form together into
+        <p class="px-md-4">Four Thunder's board is made up of modular tiles that form together into
           "the Land" as the game is being played, then in the second half of
           the game, are taken apart one tile at a time until the Land is no
           more. This feature of waxing and waning (like the moon) is the
@@ -169,9 +169,15 @@
   </div>
 
   <div class="footer">
+    <div class="container-fluid">
     <!-- <div class="row">
-      <div class="col"><i class="fa fa-facebook-f footer-icon"></i></div>
+      <div class="col">
+        <a href="#"><i class="fab fa-facebook-square footer-icon mx-1"></i></a>
+        <a href="#"><i class="fab fa-twitter-square footer-icon mx-1"></i></a>
+        <a href="#"><i class="fab fa-instagram footer-icon mx-1"></i></a>
+      </div>
     </div> -->
+  </div>
   </div>
   <!-- </div> -->
   <!-- build:js scripts/vendor.js -->

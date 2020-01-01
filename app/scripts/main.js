@@ -10,11 +10,26 @@ if(document.location.href.indexOf('fadein')===-1){
   });
 }
 
+const closeOpener = () => {
+  let opener = document.querySelector('.opener');
+  opener.style.display='none';
+  document.body.style='overflow-y:scroll';
+}
   links.forEach(link => link.addEventListener('click', ()=> {
     navbarNav.classList.remove('show')
   }))
 
 if(document.querySelector('.opener')){
+  // if(localStorage.seenIntro==='true') {
+  //   closeOpener()
+  // } else {
+    // localStorage.seenIntro=true;
+    runOpen();
+  // }
+}
+
+function runOpen(){
+    document.getElementById('skipButton').addEventListener('click', closeOpener);
     let textArray=['A board game about Balance', 'From a Native American point of view',
     'Coming soon, under development now', '... And you can be a part!']
     let i;
@@ -31,16 +46,14 @@ if(document.querySelector('.opener')){
     setTimeout(() => {
       document.querySelector('#opener-logo').classList.remove('opener-text-hidden');
       document.querySelector('#opener-logo').classList.add('short-fade');
+      // document.querySelector('#gamePlay').src='images/converted.mp4';
     }, 6200)
 
+
     setTimeout(() =>{
-      let opener = document.querySelector('.opener');
-      document.querySelector('#gamePlay').setAttribute('autoplay,""')
-      // uncomment to hide opener
-      opener.style.display='none';
-      document.body.style='overflow-y:scroll';
+      closeOpener();
       // opener.style.height='0px';
-    }, 9980)
+    }, 10980)
   // var tiles = new Image();
   // var canvas = document.getElementById('canvas');
   // var ctx = canvas.getContext('2d');
@@ -110,11 +123,11 @@ if(document.getElementById('contactFormSend')){
 if(document.getElementById('gamePlay')){
   let video = document.getElementById('gamePlay');
   video.addEventListener('canplay', () => {
-    video.autoplay='autoplay'
+    // video.autoplay='autoplay'
     console.log('loaded')
-    video.addEventListener('click', function(){
-      video.play();
-    })
+    // video.addEventListener('click', function(){
+    //   video.play();
+    // })
   })
 }
 
@@ -122,7 +135,7 @@ if(document.location.href.indexOf('smokescorner.html')!==-1){
   var db = firebase.firestore()
 
   // let featuredTitle = document.getElementById('featuredTitle');
-  let feateuredText = document.getElementById('featuredText');
+  let featuredText = document.getElementById('featuredText');
   db.collection('quillPosts').get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         let data = (doc.data());
