@@ -20,10 +20,16 @@ const closeOpener = () => {
   }))
 
 if(document.querySelector('.opener')){
-  // if(localStorage.seenIntro==='true') {
-  //   closeOpener()
-  // } else {
-    // localStorage.seenIntro=true;
+  if(localStorage.seenIntro==='true') {
+    if(localStorage.whenSeen+300000<=Date.now()){
+      localStorage.whenSeen=Date.now();
+      runOpen()
+    }else{
+      closeOpener()
+    }
+  } else {
+    localStorage.whenSeen=Date.now();
+    localStorage.seenIntro=true;
     runOpen();
   // }
 }
