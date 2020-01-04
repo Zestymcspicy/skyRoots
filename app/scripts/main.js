@@ -31,7 +31,7 @@ if(document.querySelector('.opener')){
     localStorage.whenSeen=Date.now();
     localStorage.seenIntro=true;
     runOpen();
-  // }
+  }
 }
 
 function runOpen(){
