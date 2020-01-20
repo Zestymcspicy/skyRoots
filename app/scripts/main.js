@@ -55,7 +55,7 @@ function loadBlogPost(){
             </div>
           </div>
           </div>`)
-        if(data.frontPage){
+        if(data.frontPage && data.published){
           let featuredText = frontPageBlogArea.getElementById('featuredText');
           document.getElementById('featuredPostHook').appendChild(frontPageBlogArea)
         // let entry = JSON.parse(data)
@@ -96,32 +96,6 @@ function runOpen(){
       closeOpener();
       // opener.style.height='0px';
     }, 10980)
-
-
-//   function runWaxing() {
-//     let wh
-//     if(window.innerHeight>window.innerWidth){
-//       wh=(.9*window.innerWidth)
-//     } else {
-//       wh=(.9*window.innerHeight)
-//     }
-//     canvas.height=wh;
-//     canvas.width=wh;
-//     canvas.classList.remove('opener-text-hidden')
-//
-//     // tiles.addEventListener('load', function() {
-//     ctx.drawImage(tiles, 0, 0, wh, wh)
-//     ctx.fillRect(0, (.5*wh), wh, (.5*wh))
-//     ctx.fillRect((.5*wh), 0, (.5*wh), (.5*wh))
-//     ctx.beginPath();
-//     ctx.moveTo(((1/6)*wh),0);
-//     ctx.lineTo((.5*wh),(.5*wh));
-//     ctx.lineTo((.5*wh), 0);
-//     ctx.lineTo(((1/3)*wh),0);
-//     ctx.fill();
-//     // }, false);
-//     // console.log(tiles);
-//   }
 }
 
 if(document.getElementById('contactFormSend')){
