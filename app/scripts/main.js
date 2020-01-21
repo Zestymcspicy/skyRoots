@@ -111,9 +111,6 @@ if(document.getElementById('gamePlay')){
   video.addEventListener('canplay', () => {
     // video.autoplay='autoplay'
     console.log('loaded')
-    // video.addEventListener('click', function(){
-    //   video.play();
-    // })
   })
 }
 
