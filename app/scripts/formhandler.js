@@ -97,9 +97,10 @@
   document.addEventListener('DOMContentLoaded', loaded, false);
 
   function disableAllButtons(form) {
-    var buttons = form.querySelectorAll('button');
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
-    }
+    form.querySelector('#contactFormSend').disabled = true;
+    // var buttons = form.querySelectorAll('button');
+    // for (var i = 0; i < buttons.length; i++) {
+    //   buttons[i].disabled = true;
+    // }
   }
 })();

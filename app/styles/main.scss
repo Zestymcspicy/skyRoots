@@ -30,7 +30,13 @@ h2{
   width:100%;
   height: auto;
   // position: fixed;
-  box-shadow: 0px 4px 2px black;
+  box-shadow: 0px 4px 4px #32230d;
+}
+
+#imageAtt {
+  span{
+    font-size: 12px;
+  }
 }
 
 .footer-icon{
