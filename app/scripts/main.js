@@ -24,20 +24,26 @@ if(document.querySelector('.opener')){
   runOpen();
   loadBlogPost();
 }
-// if(document.querySelector('.opener')){
-//   if(localStorage.seenIntro==='true') {
-//     if(localStorage.whenSeen+300000<=Date.now()){
-//       localStorage.whenSeen=Date.now();
-//       runOpen()
-//     }else{
-//       closeOpener()
-//     }
-//   } else {
-//     localStorage.whenSeen=Date.now();
-//     localStorage.seenIntro=true;
-//     runOpen();
-//   }
-// }
+
+if(document.querySelector('.opener')){
+  if(document.cookie.seenIntro==='true') {
+    if(document.cookie.whenSeen+300000<=Date.now()){
+      document.cookie.whenSeen=Date.now();
+      runOpen()
+    }else{
+      closeOpener()
+    }
+  } else {
+    document.cookie.whenSeen=Date.now();
+    document.cookie.seenIntro=true;
+    runOpen();
+  }
+}
+
+if(document.cookie.agreedToPolicy!==true){
+  showCookieBanner()
+}
+
 function loadBlogPost(){
   var db = firebase.firestore()
 
