@@ -34,14 +34,21 @@ if(document.querySelector('.opener')){
       closeOpener()
     }
   } else {
-    document.cookie.whenSeen=Date.now();
-    document.cookie.seenIntro=true;
+    document.cookie = `whenSeen=${Date.now()}`;
+    document.cookie = 'seenIntro=true';
     runOpen();
   }
 }
 
 if(document.cookie.agreedToPolicy!==true){
   showCookieBanner()
+}
+
+function showCookieBanner(){
+  document.body.insertAdjacentHTML('beforeend',`<div class="cookie-banner">
+  <span>This site uses cookies, to accept click </span><button>HERE</button>
+  </div>`)
+  console.log('cookie banner');
 }
 
 function loadBlogPost(){
